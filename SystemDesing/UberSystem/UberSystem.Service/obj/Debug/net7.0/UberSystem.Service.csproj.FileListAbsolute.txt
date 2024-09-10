@@ -1,0 +1,15 @@
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.csproj.AssemblyReference.cache
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.GeneratedMSBuildEditorConfig.editorconfig
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.AssemblyInfoInputs.cache
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.AssemblyInfo.cs
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.csproj.CoreCompileInputs.cache
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/bin/Debug/net7.0/UberSystem.Service.deps.json
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/bin/Debug/net7.0/UberSystem.Service.dll
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/bin/Debug/net7.0/UberSystem.Service.pdb
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/bin/Debug/net7.0/UberSystem.Domain.dll
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/bin/Debug/net7.0/UberSystem.Domain.pdb
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.csproj.CopyComplete
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.dll
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/refint/UberSystem.Service.dll
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.pdb
+/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/ref/UberSystem.Service.dll

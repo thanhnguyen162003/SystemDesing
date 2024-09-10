@@ -1,0 +1,215 @@
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using UberSystem.Domain.Entities;
+namespace UberSystem.Infrastructure;
+
+public partial class UberSystemDbContext : DbContext
+{
+    public UberSystemDbContext()
+    {
+    }
+
+    public UberSystemDbContext(DbContextOptions<UberSystemDbContext> options)
+        : base(options)
+    {
+    }
+
+    public virtual DbSet<Cab> Cabs { get; set; }
+
+    public virtual DbSet<Customer> Customers { get; set; }
+
+    public virtual DbSet<Driver> Drivers { get; set; }
+
+    public virtual DbSet<Payment> Payments { get; set; }
+
+    public virtual DbSet<Rating> Ratings { get; set; }
+
+    public virtual DbSet<Trip> Trips { get; set; }
+
+//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//        => optionsBuilder.UseSqlServer("Data Source=127.0.0.1,1433;Initial Catalog=UberSystemDb;Persist Security Info=True;User ID=sa;Password=Aa@123456;MultipleActiveResultSets=True;TrustServerCertificate=True");
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        modelBuilder.Entity<Cab>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Cabs");
+
+            entity.ToTable("cabs");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.DriverId).HasColumnName("driverId");
+            entity.Property(e => e.RegNo)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("regNo");
+            entity.Property(e => e.Type)
+                .HasMaxLength(1)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("type");
+
+            entity.HasOne(d => d.Driver).WithMany(p => p.Cabs)
+                .HasForeignKey(d => d.DriverId)
+                .OnDelete(DeleteBehavior.Cascade)
+                .HasConstraintName("FK_Cab_Driver");
+        });
+
+        modelBuilder.Entity<Customer>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Customers");
+
+            entity.ToTable("customers");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.CreateAt)
+                .IsRowVersion()
+                .IsConcurrencyToken()
+                .HasColumnName("createAt");
+            entity.Property(e => e.Email)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("email");
+            entity.Property(e => e.Name)
+                .HasMaxLength(100)
+                .HasColumnName("name");
+        });
+
+        modelBuilder.Entity<Driver>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Drivers");
+
+            entity.ToTable("drivers");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.CabId).HasColumnName("cabId");
+            entity.Property(e => e.CreateAt)
+                .IsRowVersion()
+                .IsConcurrencyToken()
+                .HasColumnName("createAt");
+            entity.Property(e => e.Dob)
+                .HasColumnType("date")
+                .HasColumnName("dob");
+            entity.Property(e => e.Email)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("email");
+            entity.Property(e => e.LocationLatitude).HasColumnName("locationLatitude");
+            entity.Property(e => e.LocationLongitude).HasColumnName("locationLongitude");
+            entity.Property(e => e.Name)
+                .HasMaxLength(100)
+                .HasColumnName("name");
+
+            entity.HasOne(d => d.Cab).WithMany(p => p.Drivers)
+                .HasForeignKey(d => d.CabId)
+                .HasConstraintName("FK_Driver_Cab");
+        });
+
+        modelBuilder.Entity<Payment>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Payments");
+
+            entity.ToTable("payments");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.Amount).HasColumnName("amount");
+            entity.Property(e => e.CreateAt)
+                .IsRowVersion()
+                .IsConcurrencyToken()
+                .HasColumnName("createAt");
+            entity.Property(e => e.Method)
+                .HasMaxLength(1)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("method");
+            entity.Property(e => e.TripId).HasColumnName("tripId");
+
+            entity.HasOne(d => d.Trip).WithMany(p => p.Payments)
+                .HasForeignKey(d => d.TripId)
+                .HasConstraintName("FK_Payment_Trip");
+        });
+
+        modelBuilder.Entity<Rating>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Ratings");
+
+            entity.ToTable("ratings");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.CustomerId).HasColumnName("customerId");
+            entity.Property(e => e.DriverId).HasColumnName("driverId");
+            entity.Property(e => e.Feedback)
+                .HasMaxLength(1)
+                .HasColumnName("feedback");
+            entity.Property(e => e.Rating1).HasColumnName("rating");
+            entity.Property(e => e.TripId).HasColumnName("tripId");
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.Ratings)
+                .HasForeignKey(d => d.CustomerId)
+                .HasConstraintName("FK_Rating_Customer");
+
+            entity.HasOne(d => d.Driver).WithMany(p => p.Ratings)
+                .HasForeignKey(d => d.DriverId)
+                .HasConstraintName("FK_Rating_Driver");
+
+            entity.HasOne(d => d.Trip).WithMany(p => p.Ratings)
+                .HasForeignKey(d => d.TripId)
+                .HasConstraintName("FK_Rating_Trip");
+        });
+
+        modelBuilder.Entity<Trip>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Trips");
+
+            entity.ToTable("trips");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.CreateAt)
+                .IsRowVersion()
+                .IsConcurrencyToken()
+                .HasColumnName("createAt");
+            entity.Property(e => e.CustomerId).HasColumnName("customerId");
+            entity.Property(e => e.DestinationLatitude).HasColumnName("destinationLatitude");
+            entity.Property(e => e.DestinationLongitude).HasColumnName("destinationLongitude");
+            entity.Property(e => e.DriverId).HasColumnName("driverId");
+            entity.Property(e => e.PaymentId).HasColumnName("paymentId");
+            entity.Property(e => e.SourceLatitude).HasColumnName("sourceLatitude");
+            entity.Property(e => e.SourceLongitude).HasColumnName("sourceLongitude");
+            entity.Property(e => e.Status)
+                .HasMaxLength(1)
+                .IsUnicode(false)
+                .IsFixedLength()
+                .HasColumnName("status");
+
+            entity.HasOne(d => d.Customer).WithMany(p => p.Trips)
+                .HasForeignKey(d => d.CustomerId)
+                .HasConstraintName("FK_Trip_Customer");
+
+            entity.HasOne(d => d.Driver).WithMany(p => p.Trips)
+                .HasForeignKey(d => d.DriverId)
+                .HasConstraintName("FK_Trip_Driver");
+
+            entity.HasOne(d => d.Payment).WithMany(p => p.Trips)
+                .HasForeignKey(d => d.PaymentId)
+                .HasConstraintName("FK_Trip_Payment");
+        });
+
+        OnModelCreatingPartial(modelBuilder);
+    }
+
+    partial void OnModelCreatingPartial(ModelBuilder modelBuilder);
+}
