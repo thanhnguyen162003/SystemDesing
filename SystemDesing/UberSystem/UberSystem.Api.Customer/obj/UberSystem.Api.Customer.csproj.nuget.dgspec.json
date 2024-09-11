@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj": {}
+    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj": {}
   },
   "projects": {
-    "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj": {
+    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj",
+        "projectUniqueName": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj",
         "projectName": "UberSystem.Api.Customer",
-        "projectPath": "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj",
+        "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Api.Customer/UberSystem.Api.Customer.csproj",
         "packagesPath": "/Users/macos/.nuget/packages/",
-        "outputPath": "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Api.Customer/obj/",
+        "outputPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Api.Customer/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/Users/macos/.nuget/NuGet/NuGet.Config"

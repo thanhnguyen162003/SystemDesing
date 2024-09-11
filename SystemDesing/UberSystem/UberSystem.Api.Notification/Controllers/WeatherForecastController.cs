@@ -3,7 +3,7 @@
 namespace UberSystem.Api.Notification.Controllers;
 
 [ApiController]
-[Route("[controller]")]
+[Route("api/notifications")]
 public class WeatherForecastController : ControllerBase
 {
     private static readonly string[] Summaries = new[]
@@ -18,7 +18,8 @@ public class WeatherForecastController : ControllerBase
         _logger = logger;
     }
 
-    [HttpGet(Name = "GetWeatherForecast")]
+    [HttpGet(Name = "GetWeatherForecast1")]
+    // [Route("notification")]
     public IEnumerable<WeatherForecast> Get()
     {
         return Enumerable.Range(1, 5).Select(index => new WeatherForecast

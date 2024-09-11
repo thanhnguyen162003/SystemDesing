@@ -3203,11 +3203,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
+      "projectUniqueName": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
       "projectName": "UberSystem.Service",
-      "projectPath": "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
+      "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
       "packagesPath": "/Users/macos/.nuget/packages/",
-      "outputPath": "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Service/obj/",
+      "outputPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/Users/macos/.nuget/NuGet/NuGet.Config"
@@ -3223,8 +3223,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj": {
-              "projectPath": "/Users/macos/Documents/Workspaces/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj"
+            "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj": {
+              "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj"
             }
           }
         }
