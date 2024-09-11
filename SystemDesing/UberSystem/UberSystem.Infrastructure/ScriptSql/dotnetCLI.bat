@@ -13,6 +13,6 @@ dotnet add package Microsoft.AspNetCore.Mvc.Testing
 dotnet add package Moq
 
 dotnet new webapp -o  UberSystem.WebApp
-
+dotnet new webapi  -o UberSystem.Api.Authentication
 	
 EF Core Power Tools

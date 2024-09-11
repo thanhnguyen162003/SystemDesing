@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using UberSystem.Domain.Entities;
 namespace UberSystem.Infrastructure;
 
+
 public partial class UberSystemDbContext : DbContext
 {
     public UberSystemDbContext()
@@ -27,9 +28,11 @@ public partial class UberSystemDbContext : DbContext
 
     public virtual DbSet<Trip> Trips { get; set; }
 
-//    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-//#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
-//        => optionsBuilder.UseSqlServer("Data Source=127.0.0.1,1433;Initial Catalog=UberSystemDb;Persist Security Info=True;User ID=sa;Password=Aa@123456;MultipleActiveResultSets=True;TrustServerCertificate=True");
+    public virtual DbSet<User> Users { get; set; }
+
+//     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+// #warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
+//         => optionsBuilder.UseSqlServer("Data Source=127.0.0.1,1433;Initial Catalog=UberSystemDb;Persist Security Info=True;User ID=sa;Password=Aa@123456;MultipleActiveResultSets=True;TrustServerCertificate=True");
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -72,13 +75,11 @@ public partial class UberSystemDbContext : DbContext
                 .IsRowVersion()
                 .IsConcurrencyToken()
                 .HasColumnName("createAt");
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("email");
-            entity.Property(e => e.Name)
-                .HasMaxLength(100)
-                .HasColumnName("name");
+            entity.Property(e => e.UserId).HasColumnName("userId");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Customers)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK_Customer_User");
         });
 
         modelBuilder.Entity<Driver>(entity =>
@@ -98,19 +99,17 @@ public partial class UberSystemDbContext : DbContext
             entity.Property(e => e.Dob)
                 .HasColumnType("date")
                 .HasColumnName("dob");
-            entity.Property(e => e.Email)
-                .HasMaxLength(50)
-                .IsUnicode(false)
-                .HasColumnName("email");
             entity.Property(e => e.LocationLatitude).HasColumnName("locationLatitude");
             entity.Property(e => e.LocationLongitude).HasColumnName("locationLongitude");
-            entity.Property(e => e.Name)
-                .HasMaxLength(100)
-                .HasColumnName("name");
+            entity.Property(e => e.UserId).HasColumnName("userId ");
 
             entity.HasOne(d => d.Cab).WithMany(p => p.Drivers)
                 .HasForeignKey(d => d.CabId)
                 .HasConstraintName("FK_Driver_Cab");
+
+            entity.HasOne(d => d.User).WithMany(p => p.Drivers)
+                .HasForeignKey(d => d.UserId)
+                .HasConstraintName("FK_Driver_User");
         });
 
         modelBuilder.Entity<Payment>(entity =>
@@ -206,6 +205,29 @@ public partial class UberSystemDbContext : DbContext
             entity.HasOne(d => d.Payment).WithMany(p => p.Trips)
                 .HasForeignKey(d => d.PaymentId)
                 .HasConstraintName("FK_Trip_Payment");
+        });
+
+        modelBuilder.Entity<User>(entity =>
+        {
+            entity.HasKey(e => e.Id).HasName("PK_Users");
+
+            entity.ToTable("users");
+
+            entity.Property(e => e.Id)
+                .ValueGeneratedNever()
+                .HasColumnName("id");
+            entity.Property(e => e.Email)
+                .HasMaxLength(50)
+                .IsUnicode(false)
+                .HasColumnName("email");
+            entity.Property(e => e.Password)
+                .HasMaxLength(500)
+                .IsUnicode(false)
+                .HasColumnName("password");
+            entity.Property(e => e.Role).HasColumnName("role");
+            entity.Property(e => e.UserName)
+                .HasMaxLength(50)
+                .HasColumnName("userName");
         });
 
         OnModelCreatingPartial(modelBuilder);
