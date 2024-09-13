@@ -24,5 +24,4 @@ public class CabController : ControllerBase
         _logger = logger;
         _cabService = cabService;
     }
-    
 }
