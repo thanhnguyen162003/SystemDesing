@@ -1,34 +1,44 @@
 ﻿<Properties StartupConfiguration="{29F15F54-E4B4-4B94-A3E1-486AE6702CE9}|https">
-  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints />
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.ItemProperties.UberSystem.Api.Customer FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.UberSystem.Api.Driver FirstBuild="True" />
-  <MonoDevelop.Ide.ItemProperties.UberSystem.Api.Notification FirstBuild="True" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="UberSystem.OcelotGateway/Program.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="UberSystem.Service/UserService.cs">
     <Files>
-      <File FileName="UberSystem.Tests/UnitTest1.cs" />
-      <File FileName="UberSystem.Api.Notification/Program.cs" />
-      <File FileName="UberSystem.Api/Controllers/CabController.cs" />
-      <File FileName="UberSystem.Api/Controllers/WeatherForecastController.cs" />
-      <File FileName="UberSystem.Infrastructure/UberSystemDbContext.cs" />
-      <File FileName="UberSystem.Infrastructure/Repository.cs" />
+      <File FileName="UberSystem.OcelotGateway/Program.cs" />
+      <File FileName="UberSystem.OcelotGateway/ocelot.json" />
+      <File FileName="UberSystem.Service/TokenService.cs" />
+      <File FileName="UberSystem.Domain/Interfaces/Services/IUserService.cs" />
+      <File FileName="UberSystem.Domain/Interfaces/Services/ICabService.cs" />
       <File FileName="UberSystem.Service/CabService.cs" />
-      <File FileName="UberSystem.OcelotGateway/Program.cs" Line="7" Column="34" />
+      <File FileName="UberSystem.Service/UserService.cs" Line="39" Column="35" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="UberSystem" expanded="True">
-            <Node name="UberSystem.OcelotGateway" selected="True" />
-            <Node name="UberSystem.Tests" expanded="True" />
+            <Node name="UberSystem.Api.Authentication" expanded="True" />
+            <Node name="UberSystem.Domain" expanded="True">
+              <Node name="Interfaces" expanded="True">
+                <Node name="Services" expanded="True" />
+              </Node>
+            </Node>
+            <Node name="UberSystem.Infrastructure" expanded="True" />
+            <Node name="UberSystem.OcelotGateway" expanded="True" />
+            <Node name="UberSystem.Service" expanded="True">
+              <Node name="UserService.cs" selected="True" />
+            </Node>
           </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.ItemProperties.UberSystem.Api.Driver FirstBuild="True" />
+  <MonoDevelop.Ide.ItemProperties.UberSystem.Api.Customer FirstBuild="True" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.UberSystem.OcelotGateway PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.ItemProperties.docker-compose PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.UberSystem.Api.Notification FirstBuild="True" />
   <MonoDevelop.Ide.ItemProperties.UberSystem.Api PreferredExecutionTarget="/Applications/Google Chrome.app" />
 </Properties>

@@ -36,25 +36,25 @@ namespace UberSystem.Infrastructure
  
         public async Task DeleteAsync(T entity, bool saveChanges = true)
         {
-                Entities.Remove(entity);
-                if (saveChanges)
-                {
-                    await DbContext.SaveChangesAsync();
-                }
+            Entities.Remove(entity);
+            if (saveChanges)
+            {
+                await DbContext.SaveChangesAsync();
+            }
         }
  
         public async Task DeleteRangeAsync(IEnumerable<T> entities, bool saveChanges = true)
         {
         var enumerable = entities as T[] ?? entities.ToArray();
         if (enumerable.Any())
-                {
-                    Entities.RemoveRange(enumerable);
-                }
+        {
+            Entities.RemoveRange(enumerable);
+        }
 
-                if (saveChanges)
-                {
-                    await DbContext.SaveChangesAsync();
-                }
+        if (saveChanges)
+        {
+            await DbContext.SaveChangesAsync();
+        }
         }
  
     	public async Task<IList<T>> GetAllAsync()
@@ -74,12 +74,12 @@ namespace UberSystem.Infrastructure
  
         public async Task InsertAsync(T entity, bool saveChanges = true)
         {
-                await Entities.AddAsync(entity);
+            await Entities.AddAsync(entity);
 
-                if (saveChanges)
-                {
-                    await DbContext.SaveChangesAsync();
-                }
+            if (saveChanges)
+            {
+                await DbContext.SaveChangesAsync();
+            }
         }
  
         public async Task InsertRangeAsync(IEnumerable<T> entities, bool saveChanges = true)

@@ -12,6 +12,7 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 var configuration = builder.Configuration;
 //DI services
 builder.Services.AddDatabase(configuration).AddServices();
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

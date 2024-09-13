@@ -10,29 +10,29 @@ namespace UberSystem.Infrastructure
 {
    	public class UnitOfWork : IUnitOfWork
    	{
-          	public DbContext DbContext { get; private set; }
+        public DbContext DbContext { get; private set; }
     	private Dictionary<string, object> Repositories { get; }
     	private IDbContextTransaction _transaction;
     	private IsolationLevel? _isolationLevel;
  
     	public UnitOfWork(DbFactory dbFactory)
-          	{
-                 	DbContext = dbFactory.DbContext;
+        {
+            DbContext = dbFactory.DbContext;
         	Repositories = new Dictionary<string, dynamic>();
     	}
  
     	public async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
-          	{
-                 	return await DbContext.SaveChangesAsync(cancellationToken);
-          	}
+        {
+            return await DbContext.SaveChangesAsync(cancellationToken);
+        }
  
-          	private async Task StartNewTransactionIfNeeded()
+        private async Task StartNewTransactionIfNeeded()
     	{
         	if (_transaction == null)
         	{
             	_transaction =  _isolationLevel.HasValue ?
                 	await DbContext.Database.BeginTransactionAsync(_isolationLevel.GetValueOrDefault()) : await DbContext.Database.BeginTransactionAsync();
-  	      }
+  	      	}
     	}
  
     	public async Task BeginTransaction()
