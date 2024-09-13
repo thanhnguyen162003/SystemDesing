@@ -1,26 +1,32 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj": {}
+    "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj": {}
   },
   "projects": {
-    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj": {
+    "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj",
+        "projectUniqueName": "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj",
         "projectName": "UberSystem.Domain",
-        "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj",
-        "packagesPath": "/Users/macos/.nuget/packages/",
-        "outputPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/obj/",
+        "projectPath": "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\long.vu\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/macos/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\long.vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,6 +39,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -70,35 +81,41 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj": {
+    "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
+        "projectUniqueName": "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj",
         "projectName": "UberSystem.Service",
-        "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
-        "packagesPath": "/Users/macos/.nuget/packages/",
-        "outputPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/obj/",
+        "projectPath": "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj",
+        "packagesPath": "C:\\Users\\long.vu\\.nuget\\packages\\",
+        "outputPath": "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "/Users/macos/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\long.vu\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj": {
-                "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj"
+              "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj": {
+                "projectPath": "D:\\FPT Uni\\PRN231\\code\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj"
               }
             }
           }
@@ -107,6 +124,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -138,7 +160,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

@@ -28,3 +28,19 @@
 /Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/refint/UberSystem.Service.dll
 /Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/UberSystem.Service.pdb
 /Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/obj/Debug/net7.0/ref/UberSystem.Service.dll
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\bin\Debug\net7.0\UberSystem.Service.deps.json
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\bin\Debug\net7.0\UberSystem.Service.dll
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\bin\Debug\net7.0\UberSystem.Service.pdb
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\bin\Debug\net7.0\UberSystem.Domain.dll
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\bin\Debug\net7.0\UberSystem.Domain.pdb
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.csproj.AssemblyReference.cache
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.GeneratedMSBuildEditorConfig.editorconfig
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.AssemblyInfoInputs.cache
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.AssemblyInfo.cs
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.csproj.CoreCompileInputs.cache
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.sourcelink.json
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSyst.8ACCD1DF.Up2Date
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.dll
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\refint\UberSystem.Service.dll
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\UberSystem.Service.pdb
+D:\FPT Uni\PRN231\code\SystemDesing\SystemDesing\UberSystem\UberSystem.Service\obj\Debug\net7.0\ref\UberSystem.Service.dll
