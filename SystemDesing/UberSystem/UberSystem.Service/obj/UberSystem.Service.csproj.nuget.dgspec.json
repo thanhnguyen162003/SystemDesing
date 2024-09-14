@@ -1,26 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj": {}
+    "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj": {}
   },
   "projects": {
-    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj": {
+    "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj",
         "projectName": "UberSystem.Domain",
-        "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj",
-        "packagesPath": "/Users/macos/.nuget/packages/",
-        "outputPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/obj/",
+        "projectPath": "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj",
+        "packagesPath": "C:\\Users\\ThanhNguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/macos/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ThanhNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -33,12 +35,21 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
           "dependencies": {
+            "AutoMapper": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.0, )"
@@ -70,35 +81,37 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj": {
+    "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
+        "projectUniqueName": "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj",
         "projectName": "UberSystem.Service",
-        "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/UberSystem.Service.csproj",
-        "packagesPath": "/Users/macos/.nuget/packages/",
-        "outputPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Service/obj/",
+        "projectPath": "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\UberSystem.Service.csproj",
+        "packagesPath": "C:\\Users\\ThanhNguyen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/macos/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\ThanhNguyen\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "/usr/local/share/dotnet/library-packs": {},
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
             "targetAlias": "net7.0",
             "projectReferences": {
-              "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj": {
-                "projectPath": "/Users/macos/Documents/Workspaces/SRS/SWD/SystemDesing/UberSystem/UberSystem.Domain/UberSystem.Domain.csproj"
+              "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj": {
+                "projectPath": "C:\\Users\\ThanhNguyen\\Documents\\git\\SystemDesing\\SystemDesing\\UberSystem\\UberSystem.Domain\\UberSystem.Domain.csproj"
               }
             }
           }
@@ -107,6 +120,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -133,12 +151,26 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            },
+            {
+              "name": "Microsoft.WindowsDesktop.App.Ref",
+              "version": "[7.0.20, 7.0.20]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.317/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

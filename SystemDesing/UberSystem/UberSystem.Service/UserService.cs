@@ -12,10 +12,23 @@ namespace UberSystem.Service
             _unitOfWork = unitOfWork;
 		}
 
-        public Task Add(User user)
+        public async Task<bool> AddUserAsync(User user, CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
-        }
+			try
+			{
+				await _unitOfWork.BeginTransaction();
+
+				var userData = _unitOfWork.Repository<User>();
+				await userData.InsertAsync(user);
+				await _unitOfWork.CommitTransaction();
+                return true;
+			}
+			catch (Exception e)
+			{
+				await _unitOfWork.RollbackTransaction();
+                return false;
+			}
+		}
 
         public Task CheckPasswordAsync(User user)
         {

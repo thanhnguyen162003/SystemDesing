@@ -7,7 +7,7 @@ namespace UberSystem.Domain.Interfaces.Services
 	{
         Task<User> FindByEmail(string  email);
         Task Update(User user);
-        Task Add(User user);
+        Task<bool> AddUserAsync(User user, CancellationToken cancellationToken = default);
         Task<bool> Login(User user);
         Task CheckPasswordAsync(User user);
     }

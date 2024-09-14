@@ -2,31 +2,43 @@
     "GlobalConfiguration": {
       "BaseUrl": "https://localhost:7276"
     },
-    "Routes": [
-      {
-        "UpstreamPathTemplate": "/gateway/drivers",
-        "UpstreamHttpMethod": [ "GET" ],
-        "DownstreamPathTemplate": "/api/drivers",
-        "DownstreamScheme": "https",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "localhost",
-            "Port": 7221
-          }
-        ]
-      },
-      {
-        "UpstreamPathTemplate": "/gateway/notifications",
-        "UpstreamHttpMethod": [ "GET" ],
-        "DownstreamPathTemplate": "/api/notifications",
-        "DownstreamScheme": "https",
-        "DownstreamHostAndPorts": [
-          {
-            "Host": "localhost",
-            "Port": 7158
-          }
-        ]
-      }
-    ]
+  "Routes": [
+    {
+      "UpstreamPathTemplate": "/gateway/drivers",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/drivers",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7221
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/authentication",
+      "UpstreamHttpMethod": [ "GET", "POST" ],
+      "DownstreamPathTemplate": "/api/authentication",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7221
+        }
+      ]
+    },
+    {
+      "UpstreamPathTemplate": "/gateway/notifications",
+      "UpstreamHttpMethod": [ "GET" ],
+      "DownstreamPathTemplate": "/api/notifications",
+      "DownstreamScheme": "https",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7158
+        }
+      ]
+    }
+  ]
   }
   
