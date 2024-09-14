@@ -1,10 +1,8 @@
-using System.Collections.Generic;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
- 
+
 namespace UberSystem.Domain.Interfaces
 {
-   	public interface IRepository<T> where T : class
+    public interface IRepository<T> where T : class
 	{
     	DbSet<T> Entities { get; }
     	DbContext DbContext { get; }
