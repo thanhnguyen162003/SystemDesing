@@ -4,6 +4,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.Register(builder.Configuration);
+//builder.Services.AddAutoMapperFramework();
 
 var app = builder.Build();
 

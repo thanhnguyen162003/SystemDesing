@@ -1,5 +1,4 @@
 using UberSystem.Api.Authentication.Extensions;
-
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -12,6 +11,7 @@ var connectionString = builder.Configuration.GetConnectionString("Default");
 var configuration = builder.Configuration;
 //DI services
 builder.Services.AddDatabase(configuration).AddServices();
+//builder.Services.AddAutoMapperFramework();
 
 var app = builder.Build();
 
