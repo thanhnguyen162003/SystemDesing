@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("UberSystem.Api.Customer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b82dc82f08b1054c505d615d739a39279b05ef03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c2fa323cef4a6460878254e308d4d22175c0d485")]
 [assembly: System.Reflection.AssemblyProductAttribute("UberSystem.Api.Customer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("UberSystem.Api.Customer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
