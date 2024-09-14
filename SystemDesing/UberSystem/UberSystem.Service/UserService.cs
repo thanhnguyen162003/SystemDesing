@@ -82,7 +82,7 @@ namespace UberSystem.Service
                 if (user is not null)
                 {
                     await _unitOfWork.BeginTransaction();
-                    await userRepository.
+                    await userRepository.UpdateAsync(user);
                     await _unitOfWork.CommitTransaction();
                 }
             }
