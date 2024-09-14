@@ -61,5 +61,21 @@ namespace UberSystem.Domain.Interfaces
     	/// <param name="saveChanges"></param>
     	/// <returns></returns>
     	Task DeleteRangeAsync(IEnumerable<T> entities, bool saveChanges = true);
-	}
+
+        /// <summary>
+    	/// Update an entity by asynchronous method
+    	/// </summary>
+    	/// <param name="entities"></param>
+    	/// <param name="saveChanges"></param>
+    	/// <returns></returns>
+        Task UpdateAsync(T entity, bool saveChanges = true);
+
+        /// <summary>
+    	/// Update an entity by asynchronous method
+    	/// </summary>
+    	/// <param name="entities"></param>
+    	/// <param name="saveChanges"></param>
+    	/// <returns></returns>
+        Task UpdateRangeAsync(IEnumerable<T> entities, bool saveChanges = true);
+    }
 }

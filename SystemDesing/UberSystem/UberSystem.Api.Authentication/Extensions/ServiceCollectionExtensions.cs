@@ -1,12 +1,8 @@
-using System;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
 using UberSystem.Domain.Entities;
 using UberSystem.Domain.Interfaces;
 using UberSystem.Domain.Interfaces.Services;
-using UberSystem.Domain.Models;
 using UberSystem.Infrastructure;
 using UberSystem.Service;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -14,7 +10,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 namespace UberSystem.Api.Authentication.Extensions
 {
-   	public static class ServiceCollectionExtensions
+    public static class ServiceCollectionExtensions
 	{
     	/// <summary>
     	/// Add needed instances for database
@@ -70,7 +66,10 @@ namespace UberSystem.Api.Authentication.Extensions
     	/// <returns></returns>
     	public static IServiceCollection AddServices(this IServiceCollection services)
     	{
-        	return services.AddScoped<ICabService, CabService>();
+        	services.AddScoped<ICabService, CabService>();
+            services.AddScoped(typeof(TokenService));
+
+            return services;
     	}
 	}
 }
